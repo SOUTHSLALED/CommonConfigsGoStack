@@ -1,0 +1,64 @@
+
+
+-----SEQUELIZE CLI------
+yarn sequelize migration:create --name=create-users
+
+yarn sequelize db:migrate
+or se não deu bom
+yarn sequelize db:migrate:undo 
+
+
+
+------REACT NATIVE -------
+
+1....npx react-native init myapp
+or
+2....yarn add react-native-cli
+3....react-native init myapp
+
+4....yarn add eslint -D
+5....yarn eslint --init
+
+"same reactjs .eslintrc and .prettierrc configs"
+"delete package-lock.json and run yarn again"
+
+6....yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+
+"then edit .eslintrc and .prettierrc"
+
+7....(optional) if some error occurs on emulation run "react-native start --reset-cache" without quotes
+or stop the emulation and "react-native run-android" again
+
+8.... download reactotron (reactotron is used to debug our app without using browser, its better of courzesss.)
+
+9....yarn add reactotron-react-native
+
+10....config reactotron in your src
+
+11.... you shoulda "adb reverse tcp:9090 tcp:9090" to reactotron work properly
+
+12.... create pages/Main/index.js  pages/User/index.js
+
+13.... create routes.js
+
+14.... "yarn add react-navigation react-native-gesture-handler"
+
+15.... "yarn link react-native-gesture-handler"
+
+16.... then you need to go to react-native-gesture-handler github and add some lines in android files to gesture-handler
+work properly
+
+17... "yarn add styled-components"
+
+18.... "yarn add react-native-vector-icons", for vectorized icons in react-native app
+       "react-native link react-native-vector-icons", link it and restart teh' app!
+
+19.... style it
+
+20.... state it, change function to class component, add handlers
+
+21.... yarn add axios , for API
+
+22.... "yarn add @react-native-community/async-storage" and link it
+
+23.... "yarn add prop-types" properties validation
