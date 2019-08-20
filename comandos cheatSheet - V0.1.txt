@@ -4,7 +4,7 @@
 yarn sequelize migration:create --name=create-users
 
 yarn sequelize db:migrate
-or se não deu bom
+or se nÃ£o deu bom
 yarn sequelize db:migrate:undo 
 
 
@@ -43,7 +43,7 @@ or stop the emulation and "react-native run-android" again
 
 14.... "yarn add react-navigation react-native-gesture-handler"
 
-15.... "yarn link react-native-gesture-handler"
+15.... "react-native link react-native-gesture-handler"
 
 16.... then you need to go to react-native-gesture-handler github and add some lines in android files to gesture-handler
 work properly
