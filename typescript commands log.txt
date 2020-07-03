@@ -1,0 +1,112 @@
+https://www.freecodecamp.org/news/portfolio-app-using-react-618814e35843/
+
+yarn init -y
+
+yarn add express
+
+yarn add typescript -D
+
+yarn tsc --init
+
+yarn add @types/express -D
+
+
+****yarn tsc****  pra converter o ts pra js
+
+**** node dist/server.js**** pra rodar o server gerado
+
+yarn add ts-node-dev -D
+
+***add to package.json***
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --transpileOnly --ignore node_modules src/server.ts"
+  },
+
+
+
+yarn add eslint -D
+yarn eslint --init  (não instale com npm, se instalar com npm apague o package-lock e dê yarn)
+yarn add -D @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest || ^7.2.0 eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest
+
+
+**** add to vscode config.json ****
+
+  //eslint
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+
+
+****************
+
+yarn add -D eslint-import-resolver-typescript
+
+
+***add in .eslintrc below rules***
+
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+
+*********************************
+
+*****add inside rules****
+
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ]
+
+yarn dev:server    | to run server
+
+
+
+
+Optional: yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+add to extends in .eslintrc
+"plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint","plugin:prettier/recommended"
+
+add to plugins in .eslintrc
+"prettier"
+
+add inside rules
+"prettier/prettier": "error",
+
+yarn add uuivd4
+
+#####################################################
+
+
+yarn add typeorm pg
+
+create connection with typeorm on ormconfig.json
+
+yarn add reflect-metadata           ***necessary to install if using decorators***
+
+
+####################################################
+
+yarn typeorm migration:revert ***to revert migrations duh***
